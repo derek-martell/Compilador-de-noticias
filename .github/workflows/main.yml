@@ -2,8 +2,8 @@ name: Boletin Mundo Social Diario
 
 on:
   schedule:
-    # Se ejecuta a las 05:00 AM hora de Perú (10:00 UTC)
-    - cron: '0 10 * * *'
+    # Se ejecuta a las 07:30 AM hora de Perú (12:30 UTC)
+    - cron: '30 12 * * *'
   workflow_dispatch: # Botón para ejecutarlo manualmente
 
 jobs:
@@ -24,7 +24,6 @@ jobs:
 
       - name: Ejecutar script principal
         env:
-          # Aquí vinculamos tus Secrets con el script
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python main.py
