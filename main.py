@@ -210,7 +210,7 @@ def send_email(html_content):
         return
 
     remitente = "yago.martell@unmsm.edu.pe"
-    destinatarios = ["7073248@gmail.com"]
+    destinatarios = ["7073248@gmail.com","anjalyarcos@gmail.com","JeffCB40@gmail.com"]
     
     # IMPORTANTE: Aquí usamos la variable global que definimos arriba
     # No hace falta poner "password = password"
