@@ -18,18 +18,28 @@ genai.configure(api_key=GEMINI_API_KEY)
 MODEL_NAME = 'gemini-2.5-flash'
 
 RSS_FEEDS = [
-    # --- Fuentes Actuales ---
+    # --- Fuentes Locales (Perú) ---
     "https://news.google.com/rss/search?q=site:gestion.pe+when:1d&hl=es-419&gl=PE&ceid=PE:es-419",
     "https://news.google.com/rss/search?q=site:elcomercio.pe+when:1d&hl=es-419&gl=PE&ceid=PE:es-419",
     "https://news.google.com/rss/search?q=site:rpp.pe+when:1d&hl=es-419&gl=PE&ceid=PE:es-419",
-    "https://www.dw.com/es/econom%C3%ADa/rss.xml",
-    # --- Nuevas Fuentes: Mercados & Finanzas ---
-    # Yahoo Finance (Noticias globales de mercados)
-    "https://finance.yahoo.com/news/rssfeeds/",
-    # Google Finance vía Google News (Sección de Negocios/Finanzas en español)
-    "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=es-419&gl=PE&ceid=PE:es-419",
-    # Opcional: Yahoo Finance - Solo noticias de Divisas/Forex (muy útil para Mundo Social)
-    "https://finance.yahoo.com/news/category-currencies/rss/"
+    
+    # --- Investigación Académica & Económica ---
+    "https://www.nber.org/rss/new.xml",               # NBER: New Working Papers (Fundamental)
+    "https://www.imf.org/en/News/RSS",                # FMI: Comunicados y noticias globales
+    "https://www.worldbank.org/en/news/rss",          # Banco Mundial
+    "https://voxeu.org/feed/recent",                  # VoxEU (Análisis de política económica de alto nivel)
+
+    # --- Noticias Internacionales de Prestigio ---
+    "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",    # NYT: Noticias del Mundo
+    "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", # NYT: Negocios y Economía
+    "https://www.economist.com/sections/business-finance/rss.xml", # The Economist (Negocios/Finanzas)
+    "https://www.dw.com/es/econom%C3%ADa/rss.xml",    # Deutsche Welle (Economía en español)
+    
+    # --- Mercados & Finanzas Globales ---
+    "https://finance.yahoo.com/news/rssfeeds/",       # Yahoo Finance
+    "https://www.cnbc.com/id/10001147/device/rss/rss.html",      # CNBC: Top News
+    "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=es-419&gl=PE&ceid=PE:es-419", # Google Biz
+    "https://finance.yahoo.com/news/category-currencies/rss/"    # Divisas/Forex
 ]
 
 # 2. FUNCIÓN DE CLASIFICACIÓN POR LOTES (BATCHING)
