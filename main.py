@@ -146,9 +146,9 @@ def build_html_report(boletin):
 
             <!-- HEADER -->
             <div style="background: linear-gradient(135deg, #1a2a6c, #2c3e50); padding: 25px; text-align: center; color: #ffffff;">
-                <h1 style="margin:0; font-size: 26px; letter-spacing: 1px;">DEREK MARTELL</h1>
+                <h1 style="margin:0; font-size: 26px; letter-spacing: 1px;">Mundo Social</h1>
                 <p style="margin:6px 0 0; font-size: 14px; font-weight: bold; color:#ffcccb;">
-                    Inteligencia Económica
+                    By Derek Martell
                 </p>
                 <p style="margin-top:8px; font-size:12px; opacity:0.9;">
                     {fecha_str}
