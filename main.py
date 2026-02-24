@@ -56,19 +56,23 @@ def clasificar_titulares_batch(lista_items):
     titulares_texto = "\n".join([f"{i}. {item['titulo']}" for i, item in enumerate(lista_items)])
 
     prompt = f"""
-    Actúa como editor de Mundo Social. Clasifica estos titulares en:
-    - Macroeconomía & Perú
-    - Mercados & Finanzas
-    - Política & Coyuntura
-    - Otros
+    Actúa como editor de Mundo Social. Tu trabajo es leer los titulares y asignarles una categoría.
+    
+    DEBES usar EXACTAMENTE uno de estos 4 nombres (respeta mayúsculas, tildes y el símbolo &):
+    1. Macroeconomía & Perú
+    2. Mercados & Finanzas
+    3. Política & Coyuntura
+    4. Otros
 
     Responde ÚNICAMENTE en JSON con este formato:
     {{
       "clasificaciones": [
-        {{"id": 0, "categoria": "Nombre de la Categoría"}},
-        ...
+        {{"id": 0, "categoria": "Macroeconomía & Perú"}},
+        {{"id": 1, "categoria": "Mercados & Finanzas"}}
       ]
     }}
+
+    IMPORTANTE: El "id" en tu respuesta JSON debe ser exactamente el número que acompaña al titular. No omitas ninguna noticia.
 
     Titulares:
     {titulares_texto}
